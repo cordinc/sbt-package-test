@@ -1,9 +1,12 @@
 name := "sbt-package-test"
-version := "0.1"
+version := "0.2"
 organization := "com.cordinc"
 githubOwner := "cordinc"
 githubRepository := "sbt-package-test"
-//githubTokenSource := TokenSource.GitConfig("github.token")
 ThisBuild / versionScheme := Some("early-semver")
 
 scalaVersion := "3.1.3"
+
+resolvers += Resolver.githubPackages("jarrahtech", "logic")
+
+libraryDependencies += "com.jarrahtechnology" %% "logic" % "0.2"
