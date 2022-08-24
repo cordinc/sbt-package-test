@@ -7,8 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-  run: echo ${ secrets.REPO_TOKEN }
+  run: echo "a = ${ secrets.REPO_TOKEN }"
    echo ${{ secrets.REPO_TOKEN }}
   
 permissions:
