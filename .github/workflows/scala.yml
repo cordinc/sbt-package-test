@@ -11,7 +11,8 @@ env:
   REPO_TOKEN: $ {{ secrets.REPO_TOKEN }}
   
 permissions:
-  contents: read
+  contents: write
+  packages: write
 
 jobs:
   build:
@@ -27,4 +28,4 @@ jobs:
         distribution: 'temurin'
         cache: 'sbt'
     - name: Run tests
-      run: sbt test run
+      run: sbt test publish run
