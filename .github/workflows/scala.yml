@@ -27,5 +27,3 @@ jobs:
         cache: 'sbt'
     - name: Run tests
       run: sbt test
-    - name: Publish
-      run: sbt publish
