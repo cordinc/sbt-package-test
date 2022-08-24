@@ -8,9 +8,10 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+  
 permissions:
-  contents: read
+  contents: write
+  packages: write
 
 jobs:
   build:
@@ -26,6 +27,4 @@ jobs:
         distribution: 'temurin'
         cache: 'sbt'
     - name: Run tests
-      run: sbt test
-    - name: Publish
-      run: sbt publish
+      run: sbt test publish
