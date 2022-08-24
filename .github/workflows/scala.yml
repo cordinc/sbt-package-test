@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  run: echo "a = ${ secrets.REPO_TOKEN }"
-   echo ${{ secrets.REPO_TOKEN }}
-  
 permissions:
   contents: read
 
@@ -27,4 +23,6 @@ jobs:
         distribution: 'temurin'
         cache: 'sbt'
     - name: Run tests
-      run: sbt test publish run
+      run: echo "::debug::$secrets.REPO_TOKEN"
+           echo "::debug::$secrets.GITHUB_TOKEN"
+           sbt test run
