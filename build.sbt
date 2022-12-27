@@ -10,4 +10,4 @@ scalaVersion := "3.1.3"
 
 resolvers += Resolver.githubPackages("jarrahtech")
 
-libraryDependencies += "com.jarrahtechnology" %% "logic" % "0.2"
+//libraryDependencies += "com.jarrahtechnology" %% "logic" % "0.2"
